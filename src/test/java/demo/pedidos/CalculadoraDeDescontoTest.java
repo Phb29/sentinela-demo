@@ -20,6 +20,11 @@ class CalculadoraDeDescontoTest {
     }
 
     @Test
+    void cashbackDeTresPorCento() {
+        assertThat(calculadora.cashbackFidelidade(33.30)).isEqualTo(0.999);
+    }
+
+    @Test
     void freteGratisAPartirDeDuzentos() {
         assertThat(calculadora.temFreteGratis(new BigDecimal("200.00"))).isTrue();
         assertThat(calculadora.temFreteGratis(new BigDecimal("199.99"))).isFalse();

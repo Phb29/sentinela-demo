@@ -17,4 +17,9 @@ public class CalculadoraDeDesconto {
     public boolean temFreteGratis(BigDecimal total) {
         return total.compareTo(LIMITE_FRETE_GRATIS) >= 0;
     }
+
+    /** Programa de fidelidade: 3% do valor da compra volta como cashback. */
+    public double cashbackFidelidade(double total) {
+        return total * 0.03;
+    }
 }
